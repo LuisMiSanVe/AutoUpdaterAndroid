@@ -34,7 +34,7 @@ On the repository are two main folders:
 Both projects have a class called 'UpdateReceiver.cs' that instantly triggers when a package is updated.
 ## Techonogies used
 - Programming Lenguage: Java
-- Libreries:
+- Libraries:
   - FileProvider
   - FTP (3.8.0)
 - Other:
