@@ -34,10 +34,12 @@ On the repository are two main folders:
 Both projects have a class called 'UpdateReceiver.cs' that instantly triggers when a package is updated.
 ## Techonogies used
 - Programming Lenguage: Java
+- Template: Empty Views Activity
 - Libraries:
   - FileProvider
   - FTP (3.8.0)
 - Other:
   - XAMPP (3.3.0)
-    - FirezillaFTP 
+    - FirezillaFTP
+  - [FreeIcons](https://freeicons.io/) (Image)
 - Recommended IDE: Android Studio (Koala Feature Drop 2024.1.2)
