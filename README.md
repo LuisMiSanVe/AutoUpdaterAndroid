@@ -17,6 +17,7 @@ The server tree should be something like this:
   - updater.apk (Only for TestApp & Updater)
   - version.ver
 These are the default names the app looks for, you can change it on the code of both programs.
+On the code, change 'URL_FTP' to your public IP (`ipconfig` command on Windows).
 With that, the FTP Server is configured, now you should just implement the TestApp's code to your app.
 ## About the app
 Depending of your needs the Updater can be optional, because it's mean is to install updates to an app in case you need to <b>delete all the app data before updating</b>. Sometimes, data from older versions can mess up with the new ones, but becouse of how Android is made, you can't do all that just from one app (delete all data then install update).
