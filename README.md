@@ -33,6 +33,7 @@ Both projects have a class called 'UpdateReceiver.cs' that instantly triggers wh
 ## Techonogies used
 - Programming Lenguage: Java
 - Template: Empty Views Activity
+- Android API: 24
 - Libraries:
   - FileProvider
   - FTP (3.8.0)
