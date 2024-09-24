@@ -1,5 +1,5 @@
 # Authomatic Android app Updater
-Two projects, one that takes the APK file of your update and installs it in the most user-friendly way possible, the other one has an auxiliary app that does the job.
+Two projects, 'SelfUpdater' and 'TestApp&Updater', one that takes the APK file of your update and installs it in the most user-friendly way possible, the other one has an auxiliary app that does the job.
 You'll have to implement the code from TestApp to properly launch Updater.
 ## Prerequisites
 The Updater app takes from a FTP Server the APKs so you'll need to have one or rise your own local server with [XAMPP](https://www.apachefriends.org/es/index.html) or similar programs.
