@@ -16,6 +16,7 @@ The server tree should be something like this:
   - testapp.apk
   - updater.apk (Only for TestApp & Updater)
   - version.ver
+
 These are the default names the app looks for, you can change it on the code of both programs.
 On the code, change 'URL_FTP' to your public IP (`ipconfig` command on Windows).
 With that, the FTP Server is configured, now you should just implement the TestApp's code to your app.
