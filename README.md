@@ -33,6 +33,7 @@ Same process of the previous one but it doesn't delete any user data and it does
 On the repository are two main folders:
 - TestApp&Updater: it includes two apps, the one you need to implement the code from (TestApp) and the auxiliary one (Updater), mainly used if you want to delete data of your app before updating.
 - SelfUpdater: just one app, you need to include the code of it in your app.
+
 Both projects have a class called 'UpdateReceiver.cs' that instantly triggers when a package is updated.
 ## Techonogies used
 - Programming Lenguage: Java
