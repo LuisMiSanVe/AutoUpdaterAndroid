@@ -21,7 +21,7 @@ In case you don't need to delete the data of your app at updating, just use the 
 - TestApp & Updater:
 When started (or when clicking a button) it searches on the FTP for the 'version.ver' file and campare if the current version is lower or not to the one written on the file. If the file has a newer version, the <b>Update Process</b> begins.
 The testapp tries to call Updater in case is already installed, if it isn't, it downloads the APK of your FTP Server and install it.
-The Updater opens instantly as it's installed and starts downloading the updated app APK.\
+The Updater opens instantly as it's installed and starts downloading the updated app APK.
 - SelfUpdater:
 Same process of the previous one but it doesn't delete any user data and it doesn't install any auxiliar app.
 ## Files
