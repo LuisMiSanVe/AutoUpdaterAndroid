@@ -9,7 +9,7 @@ The Updater app takes from a FTP Server the APKs so you'll need to have one or r
 ## Setup
 On XAMPP, rise the FirezillaFTP server, then click on 'Admin' and connect to the server.\
 On the top of the window, select `Edit>Users` and add a new user called 'user' (you can name it whatever you like but you'll have to change it on the code, by default is set to 'user') check the password and write 'user' as the password as well.\
-In the Page section, now select 'Shared folders' and add the 'FTPServer' folder you cloned from the repository and then click 'Set as home dir'.\
+In the Page section, now select 'Shared folders' and add the 'FTPServer' folder you cloned from the repository and then click 'Set as home dir'.
 > [!NOTE]
 > The file inside 'FTPServer', 'updater.apk' is only used on the TestApp&Updater Project.
 
