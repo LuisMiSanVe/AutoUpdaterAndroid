@@ -19,7 +19,7 @@ With that, the FTP Server is configured, now you should just implement the TestA
 Depending of your needs the Updater can be optional, because it's mean is to install updates to an app in case you need to <b>delete all the app data before updating</b>. Sometimes, data from older versions can mess up with the new ones, but because of how Android is made, you can't do all that just from one app (delete all data then install update).
 In case you don't need to delete the data of your app at updating, just use the self-updating app.
 - TestApp & Updater:
-When started (or when clicking a button) it searches on the FTP for the 'version.ver' file and campare if the current version is lower or not to the one written on the file. If the file has a newer version, the <b>Update Process</b> begins.
+When started (or when clicking a button) it searches on the FTP for the 'version.ver' file and compare if the current version is lower or not to the one written on the file. If the file has a newer version, the <b>Update Process</b> begins.
 The testapp tries to call Updater in case is already installed, if it isn't, it downloads the APK of your FTP Server and install it.
 The Updater opens instantly as it's installed and starts downloading the updated app APK.
 - SelfUpdater:
