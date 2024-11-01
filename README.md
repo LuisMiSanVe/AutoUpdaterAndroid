@@ -1,3 +1,4 @@
+> [See in spanish/Ver en español](https://github.com/LuisMiSanVe/AutoUpdaterAndroid/tree/spanish)
 # 📱 Automatic Android app Updater
 Two projects, 'SelfUpdater' and 'TestApp&Updater', one that takes the APK file of your update and installs it in the most user-friendly way possible, the other one has an auxiliary app that does the job.
 You'll have to implement the code from TestApp to properly launch Updater.
