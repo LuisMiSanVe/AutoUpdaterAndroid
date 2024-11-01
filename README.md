@@ -1,45 +1,45 @@
-> [See in spanish/Ver en español](https://github.com/LuisMiSanVe/AutoUpdaterAndroid/tree/spanish)
-# 📱 Automatic Android app Updater
-Two projects, 'SelfUpdater' and 'TestApp&Updater', one that takes the APK file of your update and installs it in the most user-friendly way possible, the other one has an auxiliary app that does the job.
-You'll have to implement the code from TestApp to properly launch Updater.
-## 📋 Prerequisites
-The Updater app takes from a FTP Server the APKs so you'll need to have one or rise your own local server with [XAMPP](https://www.apachefriends.org/es/index.html) or similar programs.
+> [Ver en ingles/See in english](https://github.com/LuisMiSanVe/AutoUpdaterAndroid/tree/main)
+# 📱 Actualizador Automático de Aplicaciones Android
+Dos proyectos, 'SelfUpdater' (AutoActualizador) y 'TestApp&Updater' (AppPruebaYActualizador), uno recoge una APK con la actualización y la instala de la forma más simple posible, mientras que la otra usa una aplicación auxiliar para el mismo proceso.
+Deberás implementar el codigo de la TestApp en su aplicación para lanzar el Updater correctamente.
+## 📋 Prerequisitos
+La aplicación Updater recoge de un Servidor FTP la APK por lo que necesitarás leventar un servidor por ejemplo uno local con [XAMPP](https://www.apachefriends.org/es/index.html) o programas similares.
 > [!NOTE]
-> I'll use XAMPP to explain the app's functionality
+> Usaré XAMPP para explicar la funcionalidad del proyecto
 
-## 🛠️ Setup
-On XAMPP, rise the FirezillaFTP server, then click on 'Admin' and connect to the server.\
-On the top of the window, select `Edit>Users` and add a new user called 'user' (you can name it whatever you like but you'll have to change it on the code, by default is set to 'user') check the password and write 'user' as the password as well.\
-In the Page section, now select 'Shared folders' and add the 'FTPServer' folder you cloned from the repository and then click 'Set as home dir'.
+## 🛠️ Instalación
+En XAMPP, levanta el Servidor FirezillaFTP, dale clic a 'Admin' y conectate al Servidor.\
+Arriba, selecciona `Edit>Users` y añade un nuevo usuario llamado 'user' (puedes llamarlo como quieras pero tendrás que cambiarlo en el código, pues así esta puesto por defecto) habilita la contraseña y escribe 'user' como contraseña tambien.\
+En la sección Page, selecciona 'Shared Folders' y añade la carpeta de 'FTPServer' que clonaste del repositorio y dale clic a 'Set as home dir'.
 > [!NOTE]
-> The file inside 'FTPServer', 'updater.apk' is only used on the TestApp&Updater Project.
+> Dentro de 'FTPServer', 'updater.apk' solo se usa en el proyecto de TestApp&Updater.
 
-On the code, change 'URL_FTP' to your public IP (`ipconfig` command on Windows).\
-With that, the FTP Server is configured, now you should just implement the TestApp's code to your app.
-## 📖 About the app
-Depending of your needs the Updater can be optional, because it's mean is to install updates to an app in case you need to <b>delete all the app data before updating</b>. Sometimes, data from older versions can mess up with the new ones, but because of how Android is made, you can't do all that just from one app (delete all data then install update).
-In case you don't need to delete the data of your app at updating, just use the self-updating app.
-- TestApp & Updater:
-When started (or when clicking a button) it searches on the FTP for the 'version.ver' file and compare if the current version is lower or not to the one written on the file. If the file has a newer version, the <b>Update Process</b> begins.
-The testapp tries to call Updater in case is already installed, if it isn't, it downloads the APK of your FTP Server and install it.
-The Updater opens instantly as it's installed and starts downloading the updated app APK.
+En el código, cambia 'URL_FTP' a tu IP publica (Comando `ipconfig` en Windows).\
+Con eso, el Servidor FTP está configurado, ahora deberías implementar el código de TestApp a tu aplicación.
+## 📖 Sobre la App
+Dependiendo de tus necesidades, el Updater es opcional, ya que está pensado de que en caso de actualizar necesites <b>borrar todos los datos de la aplicación</b>. A veces, datos de versiones anteriores pueden dar problemas con las nuevas, pero por como Android está hecho, ese proceso no se puede hacer todo en una misma app (borrar todos los datos y luego actualizarse).
+En caso que no necesites borrar tus datos al actualzar, usa la aplicacion self-update.
+- TestApp y Updater:
+Al inciar (o al darle al botón) busca por FTP el fichero 'version.ver' para comparar si la versión publicada es mayor o no a la instalada. Si el archivo marca una versión más nueva, el <b>proceso de actualización</b> comienza.
+La testapp intenta llamar a Updater en caso que esté instalada, si no lo está, descarga la APK del Servidor FTP y lo instala.
+El Updater se abre solo en cuanto es instalado y empieza a descargar la APK con la actualización.
 - SelfUpdater:
-Same process of the previous one but it doesn't delete any user data and it doesn't install any auxiliar app.
-## 📂 Files
-On the repository are two main folders:
-- TestApp&Updater: it includes two apps, the one you need to implement the code from (TestApp) and the auxiliary one (Updater), mainly used if you want to delete data of your app before updating.
-- SelfUpdater: just one app, you need to include the code of it in your app.
+Mismo proceso que la anterior pero no borra ningun dato y no instala ninguna app auxiliar.
+## 📂 Archivos
+En el resitorio hay dos carpetas principales:
+- TestApp&Updater: Incluye dos apps, una de la que tienes que implementar el código en la tuya propia (TestApp) y la auxiliar (Updater), principalmente usada para cuando quieres borrar todos los datos antes de actualizar.
+- SelfUpdater: solo una app, necesitas incluir el código en tu propia aplicación.
 
-The TestApp&Updater projects have a class called 'UpdateReceiver.cs' that instantly triggers when a package is updated.
-## 💻 Techonogies used
-- Programming Lenguage: Java
-- Template: Empty Views Activity
-- Android API: 24
-- Libraries:
+Los proyectos tienen una clase llamada 'UpdateReciever.cs' que se ejecuta automaticamente cuando un paquete se actualiza.
+## 💻 Tecnologías usadas
+- Lenguaje de programación: Java
+- Plantilla: Empty Views Activity
+- API de Android: 24
+- Librerias:
   - FileProvider
   - FTP (3.8.0)
-- Other:
+- Otras:
   - XAMPP (3.3.0)
     - FirezillaFTP
-  - [FreeIcons](https://freeicons.io/) (Image)
-- Recommended IDE: Android Studio (Koala Feature Drop 2024.1.2)
+  - [FreeIcons](https://freeicons.io/) (Imagen)
+- IDE Recomendado: Android Studio (Koala Feature Drop 2024.1.2)
