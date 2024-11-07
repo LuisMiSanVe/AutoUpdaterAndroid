@@ -32,14 +32,14 @@ On the repository are two main folders:
 
 The TestApp&Updater projects have a class called [UpdateReceiver.cs](https://github.com/LuisMiSanVe/AutoUpdaterAndroid/blob/main/TestApp%26Updater/TestApp/app/src/main/java/com/luismisanve/testapp/UpdateReceiver.java) that instantly triggers when a package is updated.
 ## 💻 Techonogies used
-- Programming Lenguage: Java
+- Programming Lenguage: [Java](https://www.java.com/)
 - Template: Empty Views Activity
 - Android API: 24
 - Libraries:
-  - FileProvider
+  - [FileProvider](https://developer.android.com/reference/androidx/core/content/FileProvider)
   - FTP (3.8.0)
 - Other:
-  - XAMPP (3.3.0)
-    - FirezillaFTP
+  - [XAMPP](https://www.apachefriends.org/es/index.html) (3.3.0)
+    - [FirezillaFTP](https://filezilla-project.org/)
   - [FreeIcons](https://freeicons.io/) (Image)
-- Recommended IDE: Android Studio (Koala Feature Drop 2024.1.2)
+- Recommended IDE: [Android Studio](https://developer.android.com/studio) (Koala Feature Drop 2024.1.2)
