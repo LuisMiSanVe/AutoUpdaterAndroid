@@ -32,14 +32,14 @@ En el resitorio hay dos carpetas principales:
 
 Los proyectos tienen una clase llamada [UpdateReceiver.cs](https://github.com/LuisMiSanVe/AutoUpdaterAndroid/blob/main/TestApp%26Updater/TestApp/app/src/main/java/com/luismisanve/testapp/UpdateReceiver.java) que se ejecuta automaticamente cuando un paquete se actualiza.
 ## 💻 Tecnologías usadas
-- Lenguaje de programación: Java
+- Lenguaje de programación: [Java](https://www.java.com/)
 - Plantilla: Empty Views Activity
 - API de Android: 24
 - Librerias:
-  - FileProvider
+  - [FileProvider](https://developer.android.com/reference/androidx/core/content/FileProvider)
   - FTP (3.8.0)
 - Otras:
-  - XAMPP (3.3.0)
-    - FirezillaFTP
+  - [XAMPP](https://www.apachefriends.org/es/index.html) (3.3.0)
+    - [FirezillaFTP](https://filezilla-project.org/)
   - [FreeIcons](https://freeicons.io/) (Imagen)
-- IDE Recomendado: Android Studio (Koala Feature Drop 2024.1.2)
+- IDE Recomendado: [Android Studio](https://developer.android.com/studio) (Koala Feature Drop 2024.1.2)
