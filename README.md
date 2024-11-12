@@ -34,7 +34,7 @@ The TestApp&Updater projects have a class called [UpdateReceiver.cs](https://git
 ## 💻 Techonogies used
 - Programming Lenguage: [Java](https://www.java.com/)
 - Template: Empty Views Activity
-- Android API: 34
+- Android API: 24
 - Libraries:
   - [FileProvider](https://developer.android.com/reference/androidx/core/content/FileProvider)
   - FTP (3.8.0)
