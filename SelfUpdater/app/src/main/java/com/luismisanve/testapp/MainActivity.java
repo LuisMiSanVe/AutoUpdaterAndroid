@@ -166,18 +166,36 @@ public class MainActivity extends AppCompatActivity {
                                                 ftp.disconnect();
                                             }
 
-                                            // Intents to install Updater
-                                            Intent intentInstall = new Intent(Intent.ACTION_VIEW);
-                                            Uri apkUri = FileProvider.getUriForFile(getApplicationContext(), BuildConfig.APPLICATION_ID + ".provider", new File(getExternalFilesDir(null), "testapp_standalone.apk"));
-                                            intentInstall.setDataAndType(apkUri, "application/vnd.android.package-archive");
-                                            intentInstall.setFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
-                                            startActivity(intentInstall);
+                                            boolean valid = false;
 
-                                            runOnUiThread(() -> {
-                                                txtStatus.setText("Confirm to install.");
-                                                txtStatus.setTextColor(Color.GREEN);
-                                                txtStatus.setTextSize((float) 15);
-                                            });
+    										try {
+        										new ZipFile(new File(getExternalFilesDir(null), "updater.apk"));
+        										// If the ZipFile builder fails...
+        										valid = true;
+    										} catch (IOException ex){
+    										    valid = false;
+    										}
+    										if (valid) {
+                                                // Intents to install Updater
+                                                Intent intentInstall = new Intent(Intent.ACTION_VIEW);
+                                                Uri apkUri = FileProvider.getUriForFile(getApplicationContext(), BuildConfig.APPLICATION_ID + ".provider", new File(getExternalFilesDir(null), "testapp_standalone.apk"));
+                                                intentInstall.setDataAndType(apkUri, "application/vnd.android.package-archive");
+                                                intentInstall.setFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
+                                                startActivity(intentInstall);
+    
+                                                runOnUiThread(() -> {
+                                                    txtStatus.setText("Confirm to install.");
+                                                    txtStatus.setTextColor(Color.GREEN);
+                                                    txtStatus.setTextSize((float) 15);
+                                                });
+                                            } else {
+                                                runOnUiThread(() -> {
+                                                    txtStatus.setText("The download went wrong, try again.");
+                                                    txtStatus.setTextColor(Color.RED);
+                                                    txtStatus.setTextSize((float) 15);
+                                                    BtnHttp.performClick();
+                                                });
+                                            }
                                         } catch (IOException ex) {
                                             ex.printStackTrace();
                                             runOnUiThread(() -> {
