@@ -145,30 +145,48 @@ public class MainActivity extends AppCompatActivity {
                     ftp .disconnect();
                 }
 
-                // Intent to install the app
-                Intent intentInstall = new Intent(Intent.ACTION_VIEW);
-                Uri apkUri = FileProvider.getUriForFile(getApplicationContext(), BuildConfig.APPLICATION_ID + ".fileprovider", new File(getExternalFilesDir(null), "testapp.apk"));
-                intentInstall.setDataAndType(apkUri, "application/vnd.android.package-archive");
-                intentInstall.setFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
-                startActivity(intentInstall);
+                boolean valid = false;
 
-                runOnUiThread(() -> {
-                    BtnHttp.setEnabled(true);
-                    textosActualizar[0].setText("Confirm to install.");
-                    textosActualizar[0].setTextColor(Color.GREEN);
-                });
-
-                if (reader != null) {
-                    try {
-                        reader.close();
-                    } catch (Exception e) {
-                        e.printStackTrace();
+    			try {
+        			new ZipFile(new File(getExternalFilesDir(null), "updater.apk"));
+        			// If the ZipFile builder fails...
+        			valid = true;
+    			} catch (IOException ex){
+    			    valid = false;
+    			}
+    			if (valid) {
+                    // Intent to install the app
+                    Intent intentInstall = new Intent(Intent.ACTION_VIEW);
+                    Uri apkUri = FileProvider.getUriForFile(getApplicationContext(), BuildConfig.APPLICATION_ID + ".fileprovider", new File(getExternalFilesDir(null), "testapp.apk"));
+                    intentInstall.setDataAndType(apkUri, "application/vnd.android.package-archive");
+                    intentInstall.setFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
+                    startActivity(intentInstall);
+    
+                    runOnUiThread(() -> {
+                        BtnHttp.setEnabled(true);
+                        textosActualizar[0].setText("Confirm to install.");
+                        textosActualizar[0].setTextColor(Color.GREEN);
+                    });
+    
+                    if (reader != null) {
+                        try {
+                            reader.close();
+                        } catch (Exception e) {
+                            e.printStackTrace();
+                        }
                     }
-                }
-                // Closes the connection
-                if (ftp .isConnected()) {
-                    ftp .logout();
-                    ftp .disconnect();
+                    // Closes the connection
+                    if (ftp .isConnected()) {
+                        ftp .logout();
+                        ftp .disconnect();
+                    }
+                } else {
+                    runOnUiThread(() -> {
+                        BtnHttp.setEnabled(true);
+                        textosActualizar[0].setText("The download went wrong, try again.");
+                        textosActualizar[0].setTextColor(Color.RED);
+                        BtnHttp.performClick();
+                    });
                 }
             } catch (IOException ex) {
                 ex.printStackTrace();
