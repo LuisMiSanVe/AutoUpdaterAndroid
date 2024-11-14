@@ -72,9 +72,22 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
-    private int parseVersion(String version) {
-        return Integer.parseInt(version.replace(".", ""));
-    }
+   public static int compareVersions(String version1, String version2) {
+		String[] parts1 = version1.split("\\.");
+		String[] parts2 = version2.split("\\.");
+
+		int maxLength = Math.max(parts1.length, parts2.length);
+
+		for (int i = 0; i < maxLength; i++) {
+			int v1 = (i < parts1.length) ? Integer.parseInt(parts1[i]) : 0;
+			int v2 = (i < parts2.length) ? Integer.parseInt(parts2[i]) : 0;
+
+			if (v1 != v2) {
+				return v1 - v2;
+			}
+		}
+		return 0;
+	}
 
     // Update it using FTP
     private void getUpdate() {
@@ -113,7 +126,7 @@ public class MainActivity extends AppCompatActivity {
 
                 final String version = newVersion.trim();
                 // Comparamos las versiones
-                if (parseVersion(version) > parseVersion(getApplicationContext().getPackageManager().getPackageInfo(getApplicationContext().getPackageName(), 0).versionName)) {
+                if (compareVersions(getApplicationContext().getPackageManager().getPackageInfo(getApplicationContext().getPackageName(), 0).versionName, version) < 0) {
                     runOnUiThread(() -> {
                         txtStatus.setText("There's a new version (" + version + ")");
                         txtStatus.setTextColor(Color.GREEN);
