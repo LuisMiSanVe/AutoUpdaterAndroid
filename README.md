@@ -1,5 +1,10 @@
 > [See in spanish/Ver en español](https://github.com/LuisMiSanVe/AutoUpdaterAndroid/tree/spanish)
 # 📱 Automatic Android app Updater
+[![image](https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=openjdk&logoColor=white)](https://www.java.com/)
+[![image](https://img.shields.io/badge/Android-3DDC84?style=for-the-badge&logo=android&logoColor=white)](https://developer.android.com/studio)
+[![image](https://img.shields.io/badge/Xampp-F37623?style=for-the-badge&logo=xampp&logoColor=white)](https://www.apachefriends.org/es/index.html)
+[![image](https://img.shields.io/badge/Android_Studio-3DDC84?style=for-the-badge&logo=android-studio&logoColor=white)](https://developer.android.com/studio)
+
 Two projects, 'SelfUpdater' and 'TestApp&Updater', one that takes the APK file of your update and installs it in the most user-friendly way possible, the other one has an auxiliary app that does the job.
 You'll have to implement the code from TestApp to properly launch Updater.
 ## 📋 Prerequisites
