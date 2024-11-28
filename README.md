@@ -1,5 +1,10 @@
 > [Ver en ingles/See in english](https://github.com/LuisMiSanVe/AutoUpdaterAndroid/tree/main)
 # 📱 Actualizador Automático de Aplicaciones Android
+[![image](https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=openjdk&logoColor=white)](https://www.java.com/)
+[![image](https://img.shields.io/badge/Android-3DDC84?style=for-the-badge&logo=android&logoColor=white)](https://developer.android.com/studio)
+[![image](https://img.shields.io/badge/Xampp-F37623?style=for-the-badge&logo=xampp&logoColor=white)](https://www.apachefriends.org/es/index.html)
+[![image](https://img.shields.io/badge/Android_Studio-3DDC84?style=for-the-badge&logo=android-studio&logoColor=white)](https://developer.android.com/studio)
+
 Dos proyectos, 'SelfUpdater' (AutoActualizador) y 'TestApp&Updater' (AppPruebaYActualizador), uno recoge una APK con la actualización y la instala de la forma más simple posible, mientras que la otra usa una aplicación auxiliar para el mismo proceso.
 Deberás implementar el codigo de la TestApp en su aplicación para lanzar el Updater correctamente.
 ## 📋 Prerequisitos
