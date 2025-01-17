@@ -1,4 +1,4 @@
-> [See in spanish/Ver en español](https://github.com/LuisMiSanVe/AutoUpdaterAndroid/tree/spanish)
+> [See in spanish/Ver en español](https://github.com/LuisMiSanVe/AutoUpdaterAndroid/blob/main/README.es.md)
 # 📱 Automatic Android app Updater
 [![image](https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=openjdk&logoColor=white)](https://www.java.com/)
 [![image](https://img.shields.io/badge/Android-3DDC84?style=for-the-badge&logo=android&logoColor=white)](https://developer.android.com/studio)
