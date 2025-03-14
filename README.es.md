@@ -30,6 +30,10 @@ La testapp intenta llamar a Updater en caso que esté instalada, si no lo está,
 El Updater se abre solo en cuanto es instalado y empieza a descargar la APK con la actualización.
 - SelfUpdater:
 Mismo proceso que la anterior pero no borra ningun dato y no instala ninguna app auxiliar.
+
+> [!TIP]
+> Si tienes una conexión lenta al servidor FTP, la verificación usada en [SelfUpdater (linea 158)](https://github.com/LuisMiSanVe/AutoUpdaterAndroid/blob/main/SelfUpdater/app/src/main/java/com/luismisanve/testapp/MainActivity.java) y [TestApp (linea 186)](https://github.com/LuisMiSanVe/AutoUpdaterAndroid/blob/main/TestApp%26Updater/TestApp/app/src/main/java/com/luismisanve/testapp/MainActivity.java) puede relentizar e incluso congelar tu descarga, resultando en un timeout, por lo que considera comentar esa linea.
+
 ## 📂 Archivos
 En el resitorio hay dos carpetas principales:
 - [TestApp&Updater](https://github.com/LuisMiSanVe/AutoUpdaterAndroid/tree/main/TestApp%26Updater): Incluye dos apps, una de la que tienes que implementar el código en la tuya propia ([TestApp](https://github.com/LuisMiSanVe/AutoUpdaterAndroid/tree/main/TestApp%26Updater/TestApp)) y la auxiliar ([Updater](https://github.com/LuisMiSanVe/AutoUpdaterAndroid/tree/main/TestApp%26Updater/Updater)), principalmente usada para cuando quieres borrar todos los datos antes de actualizar.
