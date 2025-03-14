@@ -30,6 +30,10 @@ The testapp tries to call Updater in case is already installed, if it isn't, it 
 The Updater opens instantly as it's installed and starts downloading the updated app APK.
 - SelfUpdater:
 Same process of the previous one but it doesn't delete any user data and it doesn't install any auxiliar app.
+
+> [!TIP]
+> If you have a slow connection with the FTP Server, the verification it uses in [SelfUpdater (line 158)](https://github.com/LuisMiSanVe/AutoUpdaterAndroid/blob/main/SelfUpdater/app/src/main/java/com/luismisanve/testapp/MainActivity.java) and [TestApp (line 186)](https://github.com/LuisMiSanVe/AutoUpdaterAndroid/blob/main/TestApp%26Updater/TestApp/app/src/main/java/com/luismisanve/testapp/MainActivity.java) may slow down or even freeze the download, resulting in a timeout, so consider commenting that line.
+
 ## 📂 Files
 On the repository are two main folders:
 - [TestApp&Updater](https://github.com/LuisMiSanVe/AutoUpdaterAndroid/tree/main/TestApp%26Updater): it includes two apps, the one you need to implement the code from ([TestApp](https://github.com/LuisMiSanVe/AutoUpdaterAndroid/tree/main/TestApp%26Updater/TestApp)) and the auxiliary one ([Updater](https://github.com/LuisMiSanVe/AutoUpdaterAndroid/tree/main/TestApp%26Updater/Updater)), mainly used if you want to delete data of your app before updating.
